@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Usage Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>💧 Water Usage Tracker</h1>
+    <form method="POST" action="/result">
+      <label>Shower (L):</label>
+      <input type="number" name="shower" min="0" required><br>
+
+      <label>Laundry (L):</label>
+      <input type="number" name="laundry" min="0" required><br>
+
+      <label>Cooking (L):</label>
+      <input type="number" name="cooking" min="0" required><br>
+
+      <label>Dishes (L):</label>
+      <input type="number" name="dishes" min="0" required><br>
+
+      <label>Other (L):</label>
+      <input type="number" name="other" min="0" required><br>
+
+      <button type="submit">Track Usage</button>
+    </form>
+  </div>
+</body>
+</html>

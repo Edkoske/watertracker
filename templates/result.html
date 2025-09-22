@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Usage Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>💧 Results</h1>
+    <p><strong>Total Usage:</strong> {{ total }} L</p>
+    <p><strong>Status:</strong> {{ recommendation }}</p>
+
+    <h3>📊 Usage Breakdown</h3>
+    <img src="{{ url_for('static', filename='chart.png') }}" alt="Usage Chart">
+
+    <h3>💡 Water-Saving Tips</h3>
+    <ul>
+      {% for tip in tips %}
+        <li>{{ tip }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/">⬅ Back</a>
+  </div>
+</body>
+</html>
